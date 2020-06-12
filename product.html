@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="./src/image/logo-page.ico">
+    <link rel="stylesheet" href="src/style/reset.css">
+    <!-- goole font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Sintony:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="src/style/all.css">
+    <!-- my style -->
+    <link rel="stylesheet" href="src/style/style.css">
+    <title>Luxury Restaurant</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header header--page">
+            <div class="container">
+                <a href="./" id="logo" class="header__logo"> <img src="./src/image/logo-page.png" alt="logo"></a>
+                <div class="header__menu-hamburger">
+                    <div class="header__hamburger-bar" id="js-hamburger">
+                    </div>
+                    <ul class="header__hamburger-list">
+                        <li class="header__hamburger-item">
+                            <a href="./" class="header__hamburger-link">TRANG CHỦ</a>
+                        </li>
+                        <li class="header__hamburger-item">
+                            <a href="./menu.html" class="header__hamburger-link">THỰC ĐƠN</a>
+                        </li>
+                        <li class="header__hamburger-item">
+                            <a href="./booktable.html" class="header__hamburger-link">ĐẶT BÀN</a>
+                        </li>
+                        <li class="header__hamburger-item">
+                            <a href="#" class="header__hamburger-link">BÀI VIẾT</a>
+                        </li>
+                        <li class="header__hamburger-item">
+                            <a href="./about.html" class="header__hamburger-link">GIỚI THIỆU</a>
+                        </li>
+                        <li class="header__hamburger-item">
+                            <a href="./contact.html" class="header__hamburger-link">LIÊN HỆ</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header__menu">
+                    <ul class="header__menu-list">
+                        <li class="header__menu-item">
+                            <a href="./" class="header__menu-link">TRANG CHỦ</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="./menu.html" class="header__menu-link">THỰC ĐƠN</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="./booktable.html" class="header__menu-link">ĐẶT BÀN</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">BÀI VIẾT</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="./about.html" class="header__menu-link">GIỚI THIỆU</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">LIÊN HỆ</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="./shopping-cart.html" class="header__shopping-cart"><i class="far fa-shopping-cart"></i> <span
+                        class="header__shopping-count js-shopping-cart">3</span></a>
+                <a href="./booktable.html" class="header__book btn">
+                    <i class="fas fa-concierge-bell"></i>
+                    <span>ĐẶT BÀN NGAY</span>
+                </a>
+            </div>
+        </header>
+        <section class="banner-page">
+            <div class="container">
+                <img src="./src/image/page-banner-bg.jpg" alt="1970x250" class="banner-page__bg">
+            </div>
+        </section>
+        <section class="breadscrumbs">
+            <div class="container">
+                <i class="breadscrumbs__decor breadscrumbs__decor--left sprite"></i>
+                <h1 class="breadscrumbs__title">
+                    Món Ăn
+                </h1>
+                <i class="breadscrumbs__decor breadscrumbs__decor--right sprite"></i>
+            </div>
+        </section>
+        <!-- START CONTETN OF  CHILD PAGE -->
+        <section class="product">
+            <div class="container">
+                <div class="product__thumb">
+                    <img src="./src/image/370x370.png" alt="370x370">
+                    <i class="product__zoom-icon fas fa-search-plus"></i>
+                </div>
+                <div class="product__details">
+                    <div class="product__name">Green mung beans</div>
+                    <div class="price">
+                        <span class="old-price">300.000 d</span>
+                        <span class="new-price">200.000 d</span>
+                    </div>
+                    <p class="product__summary">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took.
+                    </p>
+                    <div class="product__choose-count">
+                        <span class="decrease js-qty-down">-</span>
+                        <input type="text" value="01">
+                        <span class="increase js-qty-up">+</span>
+                    </div>
+                    <a href="#" class="product__add-btn btn js-add-to-cart">THÊM VÀO GIỎ</a>
+                    <a href="#" class="product__buy btn js-buy " >MUA NGAY</a>
+                  </div>
+                </div>
+        </section>
+        <section class="related">
+            <div class="container">
+                <h2 class="section-heading">Món ăn cùng loại</h2>
+                <ul class="related__list js-related-list">
+                    <li class="related__item js-related-item">
+                        <img src="./src/image/226x226.png" alt="226x226" class="related__image">
+                        <h5 class="related__name">adzuki beans</h5>
+                        <div class="price">
+                            <span class="old-price">300.000 d</span>
+                            <span class="new-price">200.000 d</span>
+                         </div>
+                         <a href="#" class="related__add-btn"><i class="far fa-plus"></i></a>
+                    </li>
+                    <li class="related__item js-related-item">
+                        <img src="./src/image/226x226.png" alt="226x226" class="related__image">
+                        <h5 class="related__name">adzuki beans</h5>
+                        <div class="price">
+                            <span class="old-price">300.000 d</span>
+                            <span class="new-price">200.000 d</span>
+                         </div>
+                         <a href="#" class="related__add-btn"><i class="far fa-plus"></i></a>
+                    </li>
+                    <li class="related__item js-related-item">
+                        <img src="./src/image/226x226.png" alt="226x226" class="related__image">
+                        <h5 class="related__name">adzuki beans</h5>
+                        <div class="price">
+                            <span class="old-price">300.000 d</span>
+                            <span class="new-price">200.000 d</span>
+                         </div>
+                         <a href="#" class="related__add-btn"><i class="far fa-plus"></i></a>
+                    </li>
+                    <li class="related__item js-related-item">
+                        <img src="./src/image/226x226.png" alt="226x226" class="related__image">
+                        <h5 class="related__name">adzuki beans</h5>
+                        <div class="price">
+                            <span class="old-price">300.000 d</span>
+                            <span class="new-price">200.000 d</span>
+                         </div>
+                         <a href="#" class="related__add-btn"><i class="far fa-plus"></i></a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </section>
+        <!-- END CONTENT OF CHILD PAGE -->
+        <footer class=" footer">
+            <div class="container">
+                <div class=" footer__col footer__col--1">
+                    <h3 class="footer__title">Chuyển Trang</h3>
+                    <ul class="footer__menu-list">
+                        <li class="footer__menu-item">
+                            <a href="./" class="footer__menu-link">TRANG CHỦ</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="./menu.html" class="footer__menu-link">THỰC ĐƠN</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="./booktable.html" class="footer__menu-link">ĐẶT BÀN</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="footer__menu-link">BÀI VIẾT</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="./about.html" class="footer__menu-link">GIỚI THIỆU</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="./contact.html" class="footer__menu-link">LIÊN HỆ</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="footer__col footer__col--2">
+                    <h3 class="footer__title">Thông báo mới nhất</h3>
+                    <p class="footer__p">Đăng kí nhận tin khuyến mãi mới nhất qua email.</p>
+                    <form action="#" class="form-r" id="form-subcribe" method="POST">
+                        <div class="form-r__item">
+                            <i class=" form-r__icon fal fa-envelope"></i>
+                            <input type="email" name="customer-email" id="subcriber-email"
+                                class="form-r__input" placeholder=" Email*">
+                        </div>
+                    </form>
+                    <a href="#" id="btn-subcribe" class="footer__btn btn">Đăng kí</a>
+                    <div class="social">
+                        <a href="#" class="social__icon social__icon--face"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social__icon social__icon--tw"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social__icon social__icon--google"><i
+                                class="fab fa-google-plus-g"></i></a>
+                    </div>
+
+                </div>
+                <div class="footer__col footer__col--3">
+                    <h3 class="footer__title">Ứng dụng của chúng tôi</h3>
+                    <a href="#" class="footer__link footer__link--as sprite"></a>
+                    <a href="#" class="footer__link footer__link--gs sprite"></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+              <!-- script lib-->
+    <script src="./src/js/libs/sideNav.js"></script>
+    <script src="./src/js/libs/validator.js"></script>
+    <script src="./src/js/libs/cart.js"></script>
+    <!-- index.js -->
+    <script src="./src/js/product.js"></script>
+</body>
+
+</html>

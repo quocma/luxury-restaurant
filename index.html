@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style/reset.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./src/image/logo-page.ico">
+    <!-- goole font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Sintony:wght@400;700&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="src/style/all.css">
+    <!-- my style -->
+    <link rel="stylesheet" href="src/style/style.css">
+    <title>Luxury Restaurant</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="page-header header">
+            <div class="container">
+               <a href="#" id="logo"  class="header__logo"> <img src="./src/image/logo.png" alt="logo"></a>
+               <div class="header__menu-hamburger" >
+                    <div class="header__hamburger-bar" id="js-hamburger" data-module="hamburger">
+                    </div>
+                    <ul class="header__hamburger-list">
+                        <li  class="header__hamburger-item">
+                            <a href="#" class="header__hamburger-link">TRANG CHỦ</a>
+                        </li>
+                        <li  class="header__hamburger-item">
+                            <a href="./menu.html" class="header__hamburger-link">THỰC ĐƠN</a>
+                        </li>
+                        <li  class="header__hamburger-item">
+                            <a href="./booktable" class="header__hamburger-link">ĐẶT BÀN</a>
+                        </li>
+                        <li  class="header__hamburger-item">
+                            <a href="#" class="header__hamburger-link">BÀI VIẾT</a>
+                        </li>
+                        <li  class="header__hamburger-item">
+                            <a href="./about.html" class="header__hamburger-link">GIỚI THIỆU</a>
+                        </li>
+                        <li  class="header__hamburger-item">
+                            <a href="./contact.html" class="header__hamburger-link">LIÊN HỆ</a>
+                        </li>
+                    </ul>
+                 </div>
+                <div class="header__menu">
+                    <ul class="header__menu-list">
+                        <li  class="header__menu-item">
+                            <a href="#" class="header__menu-link">TRANG CHỦ</a>
+                        </li>
+                        <li  class="header__menu-item">
+                            <a href="./menu.html" class="header__menu-link">THỰC ĐƠN</a>
+                        </li>
+                        <li  class="header__menu-item">
+                            <a href="./booktable.html" class="header__menu-link">ĐẶT BÀN</a>
+                        </li>
+                        <li  class="header__menu-item">
+                            <a href="#" class="header__menu-link">BÀI VIẾT</a>
+                        </li>
+                        <li  class="header__menu-item">
+                            <a href="./about.html" class="header__menu-link">GIỚI THIỆU</a>
+                        </li>
+                        <li  class="header__menu-item">
+                            <a href="./contact.html" class="header__menu-link">LIÊN HỆ</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="./shopping-cart.html" class="header__shopping-cart"><i class="far fa-shopping-cart"></i> <span class="header__shopping-count js-shopping-cart">3</span></a>
+                <a href="./booktable.html" class="header__book btn">
+                    <i class="fas fa-concierge-bell"></i>
+                    <span>ĐẶT BÀN NGAY</span>
+                </a>
+            </div>
+        </header>
+        <section class="banner">
+            <div class="slider">
+                <div id="js-slider" class="slider__list" autoplay="true" data-module="slider" >
+                    <img class="slider__item" src="src/image/slide-bg-5.jpg" id="lastClone" alt="banner 1970x750">
+                    <img class="slider__item" src="src/image/slide-bg-1.jpg" alt="banner 1970x750">
+                    <img class="slider__item" src="src/image/slide-bg-2.jpg" alt="banner 1970x750">
+                    <img class="slider__item" src="src/image/slide-bg-3.jpg" alt="banner 1970x750">
+                    <img class="slider__item" src="src/image/slide-bg-4jpg.jpg" alt="banner 1970x750">
+                    <img class="slider__item" src="src/image/slide-bg-5.jpg" alt="banner 1970x750">
+                    <img class="slider__item" src="src/image/slide-bg-1.jpg"  id="firstClone" alt="banner 1970x750">
+                </div>
+            </div>
+            <div class="container">
+                <div class="banner__text">
+                    <h1 class="banner__title">Teast your fav dish
+                        <span class="banner__subtitle"> from luxury restaurent.</span>
+                    </h1>
+                    <a href="tel:+1008005006" class="banner__icon sprite"></a>
+                    <p class="banner__p">Call us and book your table</p>
+                    <a  href="tel:+1008005006" class="banner__phone">1-008 005 006</a>
+                </div>
+                <div class="banner__control">
+                    <a href="#" id="js-next-btn" class="next"><i class="fal fa-chevron-right"></i></a>
+                    <a href="#" id="js-prev-btn" class="prev"><i class="fal fa-chevron-left" ></i></a>
+                </div>
+            </div>
+        </section>
+        <section class="food">
+            <div class="container">
+                <div class="food__menu">
+                    <h2 class="food__title">Food Menu</h2>
+                    <ul class="food__menu-list">
+                        <li class="food__menu-item">
+                            <h6 class="food__name">Ultimate organic fzzruit salad</h6>
+                            <p class="food__desc">survived not only five centuries but the leap lorem15</p>
+                            <div class="food__price">50.00d</div>
+                        </li>
+                        <li class="food__menu-item">
+                            <h6 class="food__name">Ultimate organic fzzruit salad</h6>
+                            <p class="food__desc">survived not only five centuries but the leap</p>
+                            <div class="food__price">50.00d</div>
+                        </li>
+                        <li class="food__menu-item">
+                            <h6 class="food__name">Ultimate organic fzzruit salad</h6>
+                            <p class="food__desc">survived not only five centuries but the leap</p>
+                            <div class="food__price">50.00d</div>
+                        </li>
+                        <li class="food__menu-item">
+                            <h6 class="food__name">Ultimate organic fzzruit salad</h6>
+                            <p class="food__desc">survived not only five centuries but the leap</p>
+                            <div class="food__price">50.00d</div>
+                        </li>
+                        
+                    </ul>
+                    <a href="./menu.html" class="food__btn btn">XEM THÊM</a>
+                </div>
+                <div class="food__special">
+                    <h2 class="food__title">Hôm Nay</h2>
+                    <div class="special">
+                        <div class="special__front">
+                            <img class="special__thumb" src="./src/image/320x210.png" alt="320x210">
+                            <div class="special__name">Pizza Marinara <span id="js-special-price">89.000d</span></div>
+                        </div>
+                        <div class="special__behind">
+                            <img class="special__thumb" src="./src/image/320x172.png" alt="320x210">
+                            <div class="special__name">Pizza Marinara <span id="js-special-price">89.000d</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="reserve">
+            <div class="container">
+               <h2 class="section-heading">Đặt Bàn Trước</h2>
+               <form action="#" class="form-r" id="form-reserve" method="POST">
+                   <div class="form-r__item">
+                       <i class=" form-r__icon fal fa-user"></i>
+                    <input type="text" name="customer-name" id="customer-name" class="form-r__input" placeholder=" Tên*">
+                   </div>
+                   <div class="form-r__item">
+                       <i class=" form-r__icon fal fa-envelope"></i>
+                    <input type="email" name="customer-email" id="customer-email" class="form-r__input" placeholder=" Email*">
+                   </div>
+                   <div class="form-r__item">
+                       <i class=" form-r__icon fal fa-clock"></i>
+                    <input type="text" name="time" id="time" class="form-r__input" placeholder=" Thời gian* (11:10, 15:00 ...)">
+                   </div>
+                   <div class="form-r__item">
+                       <i class=" form-r__icon fal fa-calendar-alt"></i>
+                    <input type="date" name="customer-calendar" id="calendar" class="form-r__input" placeholder=" Ngày* (20/02/2020)">
+                   </div>
+                   <div class="form-r__item">
+                       <i class=" form-r__icon fal fa-user-friends"></i>
+                    <input type="text" name="customer-friends" id="friends" class="form-r__input" placeholder=" Số Lượng Người*">
+                   </div>
+                   <div class="form-r__item">
+                       <i class=" form-r__icon fal fa-mobile"></i>
+                    <input type="text" name="customer-phone" id="phone" class="form-r__input" placeholder=" Số điện thoại *">
+                   </div>
+               </form>
+               <div class="form-warning"></div>
+              <div class="reserve__method">
+                <a href="#" id="js-btn-reserve" class="reserve__btn btn"> XÁC NHẬN </a>
+                <p class="reserve__p"> Hoặc Đặt Qua Số Điện Thoại</p>
+                <h4 class="reserve__phone">1-008 005 006</h4>
+              </div>
+            </div>
+        </section>
+        <section class="worktime">
+            <div class="container">
+                <h2 class="section-heading">Giờ Mở Cửa</h2>
+                <div class="worktime__inweek">Thứ 2 - Thứ 6 <span>10:00 - 22:00</span></div>
+                <div class="worktime__weeken">Thứ 7 - Chủ Nhật <span>09:00 - 12:00</span> </div>
+            </div>
+        </section>
+        <footer class="footer">
+           <div class="container">
+               <div class=" footer__col footer__col--1">
+                   <h3 class="footer__title">Chuyển Trang</h3>
+                   <ul class="footer__menu-list">
+                    <li  class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">TRANG CHỦ</a>
+                    </li>
+                    <li  class="footer__menu-item">
+                        <a href="./menu.html" class="footer__menu-link">THỰC ĐƠN</a>
+                    </li>
+                    <li  class="footer__menu-item">
+                        <a href="./booktable.html" class="footer__menu-link">BÀN ĂN</a>
+                    </li>
+                    <li  class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">BÀI VIẾT</a>
+                    </li>
+                    <li  class="footer__menu-item">
+                        <a href="./about.html" class="footer__menu-link">GIỚI THIỆU</a>
+                    </li>
+                    <li  class="footer__menu-item">
+                        <a href="./contact.html" class="footer__menu-link">LIÊN HỆ</a>
+                    </li>
+                    
+                </ul>
+               </div>
+               <div class="footer__col footer__col--2">
+                    <h3 class="footer__title">Thông báo mới nhất</h3>
+                    <p class="footer__p">Đăng kí nhận tin khuyến mãi mới nhất qua email.</p>
+                    <form action="#" class="form-r"  id="form-subcribe" method="POST">              
+                        <div class="form-r__item">
+                            <i class=" form-r__icon fal fa-envelope"></i>
+                         <input type="email" name="customer-email" id="subcriber-email" class="form-r__input" placeholder=" Email* (example_info@abc.com)">
+                        </div>
+                    </form>  
+                    <a href="#" id="btn-subcribe" class="footer__btn btn">Đăng kí</a>
+                    <div class="social">
+                        <a href="#" class="social__icon social__icon--face"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social__icon social__icon--tw"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social__icon social__icon--google"><i class="fab fa-google-plus-g"></i></a>
+                    </div>
+                    
+               </div>
+               <div class="footer__col footer__col--3">
+                <h3 class="footer__title">Ứng dụng của chúng tôi</h3>
+                   <a href="#" class="footer__link footer__link--as sprite"></a>
+                   <a href="#" class="footer__link footer__link--gs sprite"></a>
+               </div>
+           </div>
+        </footer>
+    </div>
+
+    <!-- script lib-->
+    <script src="./src/js/libs/sideNav.js"></script>
+    <script src="./src/js/libs/slider.js"></script>
+    <script src="./src/js/libs/validator.js"></script>
+    <script src="./src/js/libs/cart.js"></script>
+    <!-- index.js -->
+    <script src="./src/js/index.js"></script>
+</body>
+</html>

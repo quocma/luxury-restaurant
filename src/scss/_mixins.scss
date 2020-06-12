@@ -1,0 +1,52 @@
+// Set Display flex for el
+// usage
+// scss - @include flex(center, center, column, nowrap)
+//      or @include flex (center, center)
+@mixin flex ($align : flex-start, $justify: center) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    // flex-direction: $dir;
+    // flex-wrap: $wrap;
+}
+@mixin size($width: 100%, $height: $width) {
+    width: $width;
+    height: $height;
+}
+@mixin font ($size, $weight: normal) {
+    font-size: $size;
+    font-weight: $weight;
+}
+//  align children center of parent, when defined height/ min-height 
+@mixin v-align ($lineheight) {
+    text-align: center;
+    line-height: $lineheight;
+}
+@mixin getfont ($ff: sans-seri, $size, $weight: normal) {
+    font-size: $size;
+    font-weight: $weight;
+    font-family: $ff;
+}
+
+// reponsive 
+
+@mixin media-max1024() {
+    @media screen and (max-width: 1024px) {
+        @content;
+    }
+}
+@mixin media-max576() {
+    @media screen and (max-width: 576px) {
+        @content;
+    }
+}
+@mixin media-max768() {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+@mixin media-max960() {
+    @media screen and (max-width: 960px) {
+        @content;
+    }
+}
