@@ -1,3 +1,16 @@
+// scroll header
+var header = document.querySelector('.header');
+window.onscroll = function () { 
+    if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        header.classList.add('header--ontop');
+        header.s
+    }
+    else {
+        header.classList.remove('header--ontop');
+    }
+ }
+
+
 // reserve form
 var formReserve = document.getElementById('form-reserve');
 var reserveBtn = document.querySelector('#js-btn-reserve');

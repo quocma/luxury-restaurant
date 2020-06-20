@@ -1,22 +1,86 @@
 
-var foodNames = document.querySelectorAll('.food__name');
-// go to product on click food name
-for (let i = 0 ; i < foodNames.length ; i++) {
-    foodNames[i].addEventListener('click', () => {
-        location.assign('./product.html');
-    })
+var menuList = document.querySelector('.js-food__menu-list');
+var specList = document.querySelector('.js-food__menu-list');
+// get list dish of homepage
+fetch(`http://${HOST}:3003/dish/homepage`)
+      .then(res => {
+        res.json().then ( result => {
+            let html = ''
+            for (let item of result.menuItems) {
+                // console.log(item);
+                // dump data
+               html += `<li class="food__menu-item" >
+                            <h6 class="food__name" item-id="${item._id}">${item.name}</h6>
+                            <p class="food__desc">${item.short_desc}</p>
+                            <div class="food__price">${vndFormat(item.price)}</div>
+                        </li>
+                        `
+            }
+            menuList.innerHTML = html
+            var foodNames = document.querySelectorAll('.food__name');
+            // go to product on click food name
+            for (let i = 0 ; i < foodNames.length ; i++) {
+                foodNames[i].addEventListener('click', () => {
+                    localStorage.setItem('active_item', foodNames[i].getAttribute('item-id'));
+                    location.assign('./product.html');
+                })
+            }
+            for( let index = 0 ; index < result.todayItems.length ; index++ ) {
+                let itemhtml = `
+                                <img class="special__thumb" src="${result.todayItems[index].img}" item-id="${result.todayItems[index]._id}" alt="320x210">
+                                <div class="special__name">${result.todayItems[index].name} <span id="js-special-price">${vndFormat(result.todayItems[index].price)}</span></div> 
+                                `;
+                if(index == 0) {
+                    document.querySelector('.js-special__front').innerHTML = itemhtml;
+                    
+                }
+                if(index == 1) {
+                    document.querySelector('.js-special__behind').innerHTML = itemhtml;
+                    
+                }
+                
+            }
+            var specialImages = document.querySelectorAll('.special__thumb');
+            var specialNames = document.querySelectorAll('.special__name');
+            for (let i = 0 ; i < specialImages.length ; i++) {
+                specialImages[i].addEventListener('click', () => {
+                    localStorage.setItem('active_item', specialImages[i].getAttribute('item-id'));
+                    location.assign('./product.html');
+                })
+                specialNames[i].addEventListener('click', () => {
+                    localStorage.setItem('active_item', specialImages[i].getAttribute('item-id'));
+                    location.assign('./product.html');
+                })
+            }
+        })
+      })
+
+// =====================================================
+// scroll header
+var header = document.querySelector('.header');
+window.onscroll = function () { 
+    if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        header.classList.add('header--ontop');
+        header.s
+    }
+    else {
+        header.classList.remove('header--ontop');
+    }
+ }
+
+// ====================================================
+//  shopping cart 
+function updateCart() {
+    var cartNumberElement = document.querySelector('.js-shopping-cart');
+    if(cart.getCartNum() == 0 ) {
+        cartNumberElement.style.display = 'none';
+    }else {
+        cartNumberElement.style.display = 'block';
+        cartNumberElement.innerHTML = cart.getCartNum();
+    }
 }
-// also special food
-var specialImages = document.querySelectorAll('.special__thumb');
-var specialNames = document.querySelectorAll('.special__name');
-for (let i = 0 ; i < specialImages.length ; i++) {
-    specialImages[i].addEventListener('click', () => {
-        location.assign('./product.html');
-    })
-    specialNames[i].addEventListener('click', () => {
-        location.assign('./product.html');
-    })
-}
+updateCart();
+
 
 // reserve form
 var formReserve = document.getElementById('form-reserve');
@@ -52,13 +116,6 @@ subcribeBtn.addEventListener('click', (e) => {
         //  submit form subcribe to server Here
 
     }
-
 });
 
-//  shopping cart 
-var cartNumberElement = document.querySelector('.js-shopping-cart');
-if(cart.getCartNum() == 0 ) {
-    cartNumberElement.style.display = 'none';
-}else {
-    cartNumberElement.innerHTML = cartNumberElement.length;
-}
+

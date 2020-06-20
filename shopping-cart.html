@@ -93,14 +93,14 @@
         <!-- START CONTETN Ò  CHILD PAGE -->
         <section class="product-cart">
             <div class="container">
-                <table class="product-cart__table">
+                <table class="product-cart__table js-cart__table">
                     <tr class="product-cart__row product-cart__row--head">
                         <td >Sản phẩm</td>
                         <td >Giá</td>
                         <td >Số lượng</td>
                         <td >Tổng</td>
                     </tr>
-                    <tr class="product-cart__row product-cart__row--body">
+                    <!-- <tr class="product-cart__row product-cart__row--body">
                         <td class="product-cart__name">
                             <img src="./src/image/product-mini-thumbt.png" alt="" class="product__mini-thumb">
                             <a href="#" class="product-cart__btn-delete"><i class="far fa-times"></i></a>
@@ -113,21 +113,8 @@
                             <i class="fas fa-caret-down js-qty-down"></i>
                         </td>
                         <td class="product-cart__subtotal">69.960 d</td>
-                    </tr>      
-                    <tr class="product-cart__row product-cart__row--body">
-                        <td class="product-cart__name">
-                            <img src="./src/image/product-mini-thumbt.png" alt="" class="product__mini-thumb">
-                            <a href="#" class="product-cart__btn-delete"><i class="far fa-times"></i></a>
-                           <span> Ca Chep om dua</span>
-                        </td>
-                        <td class="product-cart__price">69.960 d</td>
-                        <td class="product-cart__qty">
-                            <input type="text" value="1">
-                            <i class="fas fa-caret-up js-qty-up"></i>
-                            <i class="fas fa-caret-down js-qty-down"></i>
-                        </td>
-                        <td class="product-cart__subtotal">69.960 d</td>
-                    </tr>      
+                    </tr>       -->
+                       
                 </table>
                 <div class="bill">
                     <div class="bill__info">
@@ -157,7 +144,7 @@
                                 <td  class="bill__total">5.464.646 vnd</td>
                             </tr>
                         </table>
-                        <a href="./checkout.html" class=" bill__take-order btn">Thanh Toán</a>
+                        <a href="./checkout.html" class=" bill__take-order btn js-bill__take-order">Thanh Toán</a>
                     </div>
                 </div>
             </div>
@@ -219,6 +206,8 @@
     <script src="./src/js/libs/sideNav.js"></script>
     <script src="./src/js/libs/validator.js"></script>
     <script src="./src/js/libs/cart.js"></script>
+    <script src="./src/js/config/config.js"></script>
+    <script src="./src/js/helper/helper.js"></script>
     <!-- index.js -->
     <script src="./src/js/shoppingcart.js"></script>
 </body>

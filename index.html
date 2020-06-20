@@ -15,7 +15,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <header class="page-header header">
+        <header class="header ">
             <div class="container">
                <a href="#" id="logo"  class="header__logo"> <img src="./src/image/logo.png" alt="logo"></a>
                <div class="header__menu-hamburger" >
@@ -64,7 +64,7 @@
                         </li>
                     </ul>
                 </div>
-                <a href="./shopping-cart.html" class="header__shopping-cart"><i class="far fa-shopping-cart"></i> <span class="header__shopping-count js-shopping-cart">3</span></a>
+                <a href="./shopping-cart.html" class="header__shopping-cart"><i class="far fa-shopping-cart"></i> <span class="header__shopping-count js-shopping-cart"></span></a>
                 <a href="./booktable.html" class="header__book btn">
                     <i class="fas fa-concierge-bell"></i>
                     <span>ĐẶT BÀN NGAY</span>
@@ -75,8 +75,8 @@
             <div class="slider">
                 <div id="js-slider" class="slider__list" autoplay="true" data-module="slider" >
                     <img class="slider__item" src="src/image/slide-bg-5.jpg" id="lastClone" alt="banner 1970x750">
-                    <img class="slider__item" src="src/image/slide-bg-1.jpg" alt="banner 1970x750">
                     <img class="slider__item" src="src/image/slide-bg-2.jpg" alt="banner 1970x750">
+                    <img class="slider__item" src="src/image/slide-bg-1.jpg" alt="banner 1970x750">
                     <img class="slider__item" src="src/image/slide-bg-3.jpg" alt="banner 1970x750">
                     <img class="slider__item" src="src/image/slide-bg-4jpg.jpg" alt="banner 1970x750">
                     <img class="slider__item" src="src/image/slide-bg-5.jpg" alt="banner 1970x750">
@@ -85,11 +85,11 @@
             </div>
             <div class="container">
                 <div class="banner__text">
-                    <h1 class="banner__title">Teast your fav dish
-                        <span class="banner__subtitle"> from luxury restaurent.</span>
+                    <h1 class="banner__title">Thưởng Thức Món Ưa Thích
+                        <span class="banner__subtitle"> Tại luxury restaurent.</span>
                     </h1>
                     <a href="tel:+1008005006" class="banner__icon sprite"></a>
-                    <p class="banner__p">Call us and book your table</p>
+                    <p class="banner__p">Gọi chúng tôi để đặt bàn ngay</p>
                     <a  href="tel:+1008005006" class="banner__phone">1-008 005 006</a>
                 </div>
                 <div class="banner__control">
@@ -102,41 +102,26 @@
             <div class="container">
                 <div class="food__menu">
                     <h2 class="food__title">Food Menu</h2>
-                    <ul class="food__menu-list">
-                        <li class="food__menu-item">
+                    <ul class="food__menu-list js-food__menu-list">
+                        <!-- <li class="food__menu-item">
                             <h6 class="food__name">Ultimate organic fzzruit salad</h6>
                             <p class="food__desc">survived not only five centuries but the leap lorem15</p>
                             <div class="food__price">50.00d</div>
                         </li>
-                        <li class="food__menu-item">
-                            <h6 class="food__name">Ultimate organic fzzruit salad</h6>
-                            <p class="food__desc">survived not only five centuries but the leap</p>
-                            <div class="food__price">50.00d</div>
-                        </li>
-                        <li class="food__menu-item">
-                            <h6 class="food__name">Ultimate organic fzzruit salad</h6>
-                            <p class="food__desc">survived not only five centuries but the leap</p>
-                            <div class="food__price">50.00d</div>
-                        </li>
-                        <li class="food__menu-item">
-                            <h6 class="food__name">Ultimate organic fzzruit salad</h6>
-                            <p class="food__desc">survived not only five centuries but the leap</p>
-                            <div class="food__price">50.00d</div>
-                        </li>
-                        
+                         -->     
                     </ul>
                     <a href="./menu.html" class="food__btn btn">XEM THÊM</a>
                 </div>
                 <div class="food__special">
                     <h2 class="food__title">Hôm Nay</h2>
                     <div class="special">
-                        <div class="special__front">
-                            <img class="special__thumb" src="./src/image/320x210.png" alt="320x210">
-                            <div class="special__name">Pizza Marinara <span id="js-special-price">89.000d</span></div>
+                        <div class="special__front js-special__front">
+                            <!-- <img class="special__thumb" src="./src/image/320x210.png" alt="320x210">
+                            <div class="special__name">Pizza Marinara <span id="js-special-price">89.000d</span></div> -->
                         </div>
-                        <div class="special__behind">
-                            <img class="special__thumb" src="./src/image/320x172.png" alt="320x210">
-                            <div class="special__name">Pizza Marinara <span id="js-special-price">89.000d</span></div>
+                        <div class="special__behind js-special__behind">
+                            <!-- <img class="special__thumb" src="./src/image/320x172.png" alt="320x210">
+                            <div class="special__name">Pizza Marinara <span id="js-special-price">89.000d</span></div> -->
                         </div>
                     </div>
                 </div>
@@ -243,6 +228,9 @@
     <script src="./src/js/libs/slider.js"></script>
     <script src="./src/js/libs/validator.js"></script>
     <script src="./src/js/libs/cart.js"></script>
+    <script src="./src/js/config/config.js"></script>
+    <script src="./src/js/helper/helper.js"></script>
+    
     <!-- index.js -->
     <script src="./src/js/index.js"></script>
 </body>

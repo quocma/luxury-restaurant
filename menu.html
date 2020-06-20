@@ -93,59 +93,41 @@
         <section class="dish">
             <div class="container">
                 <div class="dish__select">
-                    <a href="#" class="dish__option selected">
+                    <a href="#" class="dish__option selected" menu-name="all">
                         <i class="far fa-list-alt"></i> <span>Tất Cả</span>
                     </a>
-                    <a href="#" class="dish__option">
+                    <a href="#" class="dish__option" menu-name="first">
                         <i class="far fa-coffee"></i> <span>Bữa Sáng</span>
                     </a>
-                    <a href="#" class="dish__option">
+                    <a href="#" class="dish__option" menu-name="lunch">
                         <i class="far fa-cauldron"></i> <span>Bữa Trưa</span>
                     </a>
-                    <a href="#" class="dish__option">
+                    <a href="#" class="dish__option" menu-name="snack">
                         <i class="far fa-popcorn"></i> <span>Snacks</span>
                     </a>
-                    <a href="#" class="dish__option">
+                    <a href="#" class="dish__option" menu-name="pizza">
                         <i class="far fa-pizza-slice"></i> <span>Pizza</span>
                     </a>
-                    <a href="#" class="dish__option">
+                    <a href="#" class="dish__option" menu-name="soup">
                         <i class="fas fa-soup"></i><span>Soups</span>
                     </a>
-                    <a href="#" class="dish__option">
+                    <a href="#" class="dish__option" menu-name="dinner">
                         <i class="fal fa-utensils-alt"></i> <span>Bữa Tối</span>
                     </a>
                 </div>
                 <ul class="dish__list js-dish-list"> 
-                    <li class="dish__item" >
+                    <!-- <li class="dish__item" >
                         <img class="dish__thumbnail" src="https://images.unsplash.com/photo-1530805948738-95aa20739233?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="370x233">
                         <div class="dish__detail">
                             <h6 class="dish__name">jumbo 1 carb thanroor</h6>
                             <p class="dish__desc">survived not only five centuries but the leap</p>
-                            <div class="dish__bar"></div>
-                            <div class="dish__price">60.000 đ</div>
-                            <a href="#" class="dish__btn"><i class="far fa-cart-plus"></i></a>
+                             <div class="dish__bottom">
+                                <div class="dish__bar"></div>
+                                <div class="dish__price">60.000 đ</div>
+                                <a href="#" class="dish__btn js-add-to-cart"><i class="far fa-cart-plus"></i></a>
+                             </div>
                         </div>
-                    </li>
-                    <li class="dish__item">
-                        <img class="dish__thumbnail" src="./src/image/370x233.png" alt="370x233">
-                        <div class="dish__detail">
-                            <h6 class="dish__name">jumbo 2carb thanroor</h6>
-                            <p class="dish__desc">survived not only five centuries but the leap</p>
-                            <div class="dish__bar"></div>
-                            <div class="dish__price">70.000 đ</div>
-                            <a href="#" class="dish__btn"><i class="far fa-cart-plus js-add-to-cart"></i></a>
-                        </div>
-                    </li>
-                    <li class="dish__item">
-                        <img class="dish__thumbnail" src="./src/image/370x233.png" alt="370x233">
-                        <div class="dish__detail">
-                            <h6 class="dish__name">jumbo 3 carb thanroor</h6>
-                            <p class="dish__desc">survived not only five centuries but the leap</p>
-                            <div class="dish__bar"></div>
-                            <div class="dish__price">80.000 đ</div>
-                            <a href="#" class="dish__btn"><i class="far fa-cart-plus"></i></a>
-                        </div>
-                    </li>
+                    </li> -->
                     
                 </ul>
             </div>
@@ -156,21 +138,16 @@
                     <li class="pagination__item">
                         <a href="#" class="pagination__link pagination__link--prev btn btn--rounded "><i class="far fa-chevron-left"></i> PRE</a>
                     </li>
-                    <li class="pagination__item">
+                    <!-- <li class="pagination__item">
                         <a href="#" class="pagination__link pagination__link pagination__link--firstClone btn btn--rounded"> ... </a>
-                    </li>
-                    <li class="pagination__item">
+                    </li> -->
+                    <!-- <li class="pagination__item">
                         <a href="#" class="pagination__link pagination__link btn btn--rounded">1</a>
-                    </li>
-                    <li class="pagination__item">
-                        <a href="#" class="pagination__link pagination__link btn btn--rounded">2</a>
-                    </li>
-                    <li class="pagination__item">
-                        <a href="#" class="pagination__link pagination__link btn btn--rounded">3</a>
-                    </li>
-                    <li class="pagination__item">
+                    </li> -->
+                    
+                    <!-- <li class="pagination__item">
                         <a href="#" class="pagination__link pagination__link pagination__link--nextClone btn btn--rounded"> ... </a>
-                    </li>
+                    </li> -->
                     <li class="pagination__item">
                         <a href="#" class="pagination__link pagination__link--next show btn btn--rounded ">NEXT <i class="far fa-chevron-right"></i></a>
                     </li>
@@ -261,6 +238,8 @@
     <script src="./src/js/libs/sideNav.js"></script>
     <script src="./src/js/libs/validator.js"></script>
     <script src="./src/js/libs/cart.js"></script>
+    <script src="./src/js/config/config.js"></script>
+    <script src="./src/js/helper/helper.js"></script>
     <!-- menu.js -->
     <script src="./src/js/menu.js"></script>
 </body>

@@ -1,4 +1,4 @@
-(function(){
+window.onload = (function(){
     const slider = document.getElementById('js-slider') ;
     const sliderImages = document.getElementsByClassName('slider__item');
     const nextBtn = document.getElementById('js-next-btn');
@@ -10,7 +10,11 @@
 
     if(slider.getAttribute("autoplay") == 'true'){
         setInterval(showNextSlide, 8000);
+       
     }
+    window.onbeforeunload = (function () {
+        clearInterval(showNextSlide);
+    }())
     prevBtn.addEventListener('click', showPrevSlide);
     nextBtn.addEventListener('click', showNextSlide);
 
@@ -42,4 +46,3 @@
         }
     });
 }());
-

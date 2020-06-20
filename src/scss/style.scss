@@ -121,13 +121,13 @@ section {
         }
     }
     &__shopping-count {
-        @include size(1.6rem);
-        @include v-align(1.6rem);
+        @include size(2.6rem);
+        @include v-align(2.6rem);
         border-radius: 50%;
         background-color: $highlight-color;
         position: absolute;
-        top: -1rem;
-        right: -1.2rem;
+        top: -1.8rem;
+        right: -2rem;
     }
     &__book {
         @include size(19.3rem, 4.1rem);
@@ -213,6 +213,27 @@ section {
         text-align: center;
         line-height: 4rem;
         color: #000;
+    }
+}
+.header--ontop {
+    a {
+        color : #000;
+    }
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: -webkit-fill-available;
+    background-color: #e2daca;
+    z-index: 30;
+    animation: fadedown 1s ease-in-out;
+}
+@keyframes fadedown {
+    from {
+        top : -5rem;
+    }
+    to {
+        top : 0;
     }
 }
 .slider {
@@ -369,7 +390,7 @@ section {
         position: absolute;
         top : 0;
         right: 7.5rem;
-        @include getfont(Playfair Display, 2.6rem , bold);
+        @include getfont(Playfair Display, 2rem , bold);
         @include media-max576 () {
             right: 2rem;
         }
@@ -397,7 +418,7 @@ section {
         flex-direction: column;
     }
     &__name {
-        padding: 3rem 0 0 4rem;
+        padding: 3rem 0 0 8rem;
 
         @include getfont(Playfair Display, 2.2rem , bold);
         cursor: pointer;
@@ -409,6 +430,8 @@ section {
     }
     &__thumb {
         cursor: pointer;
+        @include size(32rem, 21rem);
+        object-fit: cover;
     }
     &__front , &__behind {
         padding-bottom: 4.5rem;;
@@ -798,7 +821,14 @@ section {
         }
     }
     &__detail {
+        height: 23rem;
         padding: 3.5rem 2.5rem 0;
+        @include flex(flex-start, space-between);
+        flex-direction: column;
+    }
+    &__bottom {
+      width: 100%;
+      
     }
     &__name {
         @include font(1.6rem, bold);
@@ -808,7 +838,8 @@ section {
     &__desc {
         @include font(1.4rem, 300);
         color: $text-color;
-        margin-bottom: 3.5rem;
+        margin-bottom: auto;
+        
     }
     &__price {
         padding: 2rem 0;
@@ -817,8 +848,8 @@ section {
         float: left;
     }
     &__bar {
-        @include size(95%, .1rem);
-        background-color: $text-color;   
+        @include size(100%, .1rem);
+        background-color: $text-color; 
     }
     &__btn {
         color: #000;
@@ -1084,6 +1115,9 @@ section {
             vertical-align: middle;
         }
     }
+    &__mini-thumb {
+        @include size(11.5rem);
+    }
     &__name {
         @include flex(center, flex-start);
         position: relative;
@@ -1098,6 +1132,7 @@ section {
     }
     &__price, &__subtotal {
         @include font(1.5rem, bold);
+        width: 10rem;
     }
     &__qty {
         position: relative;
@@ -1114,7 +1149,7 @@ section {
         i {
             font-size: 2.4rem;
             position: absolute;
-            right: 8.5rem;
+            right: 6rem;
             top: 5rem;
             cursor: pointer;
             &:last-child {
@@ -1445,6 +1480,7 @@ section {
         text-align: center;
     }
     &__image {
+        @include size(22.6rem);
         margin-bottom: 4rem;
         cursor: pointer;
     }
