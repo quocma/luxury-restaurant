@@ -1,3 +1,8 @@
+// ==============================
+var $ = document.querySelector.bind(document);
+var $id = document.getElementById.bind(document);
+var log = console.log.bind(console);
+// ==============================
 
 // scroll header
 var header = document.querySelector('.header');
@@ -11,6 +16,18 @@ window.onscroll = function () {
     }
  }
 
+ //  shopping cart 
+function updateCart() {
+    var cartNumberElement = $('.js-shopping-cart');
+    if(cart.getCartNum() == 0 ) {
+        cartNumberElement.style.display = 'none';
+    }else {
+        cartNumberElement.style.display = 'block';
+        cartNumberElement.innerHTML = cart.getCartNum();
+    }
+}
+updateCart();
+
 // footer email subcriber 
 var formSubcribe = document.getElementById('form-subcribe');
 var subcribeBtn  = document.getElementById('btn-subcribe');
@@ -19,20 +36,33 @@ subcribeBtn.addEventListener('click', (e) => {
     validator.resetErrMessage();
     validator.checkInput(formSubcribe);
     if(validator.getErrMessage().length == 0) {
-        alert('Bạn đã đăng kí thành công. Xin cảm ơn !!!');
         //  submit form subcribe to server Here
+        let email = {
+            email:  $id('subcribe-email').value
+        }
+        fetch(`http://${HOST}:3003/subcribe` , {
+            // fetch option
+            method: "POST",
+            body: JSON.stringify(email),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+        .then( res => res.json())
+        .then(result => {
+            alert('Bạn đã đăng kí thành công. Xin cảm ơn !!!');
+
+        })
+        .catch(err => {
+            // log(err);
+            location.replace('./404.html');
+        })
 
     }
 
 });
 
-//  shopping cart 
-var cartNumberElement = document.querySelector('.js-shopping-cart');
-if(cart.getCartNum() == 0 ) {
-    cartNumberElement.style.display = 'none';
-}else {
-    cartNumberElement.innerHTML = cartNumberElement.length;
-}
+
 
 // video control 
 var video = document.querySelector('.js-video');

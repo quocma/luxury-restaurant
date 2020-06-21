@@ -103,8 +103,27 @@ subcribeBtn.addEventListener('click', (e) => {
     validator.resetErrMessage();
     validator.checkInput(formSubcribe);
     if(validator.getErrMessage().length == 0) {
+       //  submit form subcribe to server Here
+       let email = {
+        email:  $id('subcribe-email').value
+    }
+    fetch(`http://${HOST}:3003/subcribe` , {
+        // fetch option
+        method: "POST",
+        body: JSON.stringify(email),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+    .then( res => res.json())
+    .then(result => {
         alert('Bạn đã đăng kí thành công. Xin cảm ơn !!!');
-        //  submit form subcribe to server Here
+
+    })
+    .catch(err => {
+        // log(err);
+        location.replace('./404.html');
+    })
 
     }
 
