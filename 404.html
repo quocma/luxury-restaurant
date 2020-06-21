@@ -142,6 +142,7 @@
     <script src="./src/js/libs/sideNav.js"></script>
     <script src="./src/js/libs/validator.js"></script>
     <script src="./src/js/libs/cart.js"></script>
+    <script src="./src/js/config/config.js"></script>
     <script>
         // footer email subcriber 
         var formSubcribe = document.getElementById('form-subcribe');
@@ -151,20 +152,43 @@
             validator.resetErrMessage();
             validator.checkInput(formSubcribe);
             if(validator.getErrMessage().length == 0) {
-                alert('Bạn đã đăng kí thành công. Xin cảm ơn !!!');
                 //  submit form subcribe to server Here
+                let email = {
+                    email:  document.getElementById('subcribe-email').value
+                }
+                fetch(`http://${HOST}:3003/subcribe` , {
+                    // fetch option
+                    method: "POST",
+                    body: JSON.stringify(email),
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                })
+                .then( res => res.json())
+                .then(result => {
+                    alert('Bạn đã đăng kí thành công. Xin cảm ơn !!!');
+
+                })
+                .catch(err => {
+                    // log(err);
+                    location.replace('./404.html');
+                })
 
             }
-
         });
 
+        // ====================================================
         //  shopping cart 
-        var cartNumberElement = document.querySelector('.js-shopping-cart');
-        if(cart.getCartNum() == 0 ) {
-            cartNumberElement.style.display = 'none';
-        }else {
-            cartNumberElement.innerHTML = cartNumberElement.length;
+        function updateCart() {
+            var cartNumberElement = document.querySelector('.js-shopping-cart');
+            if(cart.getCartNum() == 0 ) {
+                cartNumberElement.style.display = 'none';
+            }else {
+                cartNumberElement.style.display = 'block';
+                cartNumberElement.innerHTML = cart.getCartNum();
+            }
         }
+        updateCart();
     </script>
 </body>
 </html>

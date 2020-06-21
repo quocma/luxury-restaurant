@@ -1,6 +1,17 @@
+// ==============================
+var $ = document.querySelector.bind(document);
+var $id = document.getElementById.bind(document);
+var log = console.log.bind(console);
+// ==============================
 
-var menuList = document.querySelector('.js-food__menu-list');
-var specList = document.querySelector('.js-food__menu-list');
+var cname = $id('customer-name');
+var email = $id('customer-email');
+var time = $id('time');
+var date = $id('calendar');
+var guest = $id('friends');
+
+var menuList = $('.js-food__menu-list');
+var specList = $('.js-food__menu-list');
 // get list dish of homepage
 fetch(`http://${HOST}:3003/dish/homepage`)
       .then(res => {
@@ -61,7 +72,6 @@ var header = document.querySelector('.header');
 window.onscroll = function () { 
     if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
         header.classList.add('header--ontop');
-        header.s
     }
     else {
         header.classList.remove('header--ontop');
@@ -93,6 +103,31 @@ reserveBtn.addEventListener('click', (e) => {
     if(validator.getErrMessage().length == 0 ) {
         warning.textContent = '';
         // submit form reserve to server;
+        let bookingInfo = {
+            name : cname.value,
+            email:  email.value,
+            time:  time.value ,
+            date:  date.value,
+            guest:  guest.value,
+            phone:  phone.value
+        }
+        fetch(`http://${HOST}:3003/booking` , {
+            // fetch option
+            method: "POST",
+            body: JSON.stringify(bookingInfo),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+        .then( res => res.json())
+        .then(result => {
+            alert('Đặt bàn thành công, xin cảm ơn !!!');
+
+        })
+        .catch(err => {
+            // log(err);
+            location.replace('./404.html');
+        })
     }else {
        
         if(warning.textContent) {

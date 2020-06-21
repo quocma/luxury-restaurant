@@ -44,10 +44,15 @@ img {
     margin: 0 auto;
     // border-left: 1px solid red;
     // border-right: 1px solid red;
+    @include media-max1024 () {
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+    }
 }
-section {
-    // border-bottom: 1px dashed chartreuse;
-}
+// section {
+//     border-bottom: 1px dashed chartreuse;
+// }
 .sprite {
     background-image: url('../image/icon.png');
     background-repeat: no-repeat;
@@ -263,9 +268,10 @@ section {
     }
     &__title {
        font-size: 6.2rem;
+       color: $highlight-color;
        @include media-max576 () {
         visibility: hidden;
-    }
+       }
     }
     &__subtitle {
         display: block;
@@ -321,8 +327,9 @@ section {
         @include flex(stretch, space-between);
         @include media-max768(){
             flex-wrap: wrap;
-            padding-top: 0;
+            padding-top: 11.5rem;
         }
+        
     }
     &__menu {
         width: calc(50% - 1.5rem);
@@ -367,6 +374,9 @@ section {
         margin-bottom: 3rem;
         @include media-max768(){
             margin-top: 3rem;
+        }
+        @include media-max576 () {
+            margin-top: 10rem;
         }
     }
     &__name {
@@ -587,11 +597,9 @@ section {
     &__col--2 {
         width: 47rem;
         @include media-max768(){
+            width: 100%;
             margin: 3rem 0;
             text-align: center;
-         }
-        @include media-max576(){
-           text-align: left;
          }
     }
     
@@ -609,9 +617,9 @@ section {
         @include media-max768(){
             text-align: center;
          }
-         @include media-max576 () {
-            text-align: left;
-        }
+        //  @include media-max576 () {
+        //     text-align: left;
+        // }
     }
     &__menu-link {
         @include getfont(Sintony, 1.4rem, 300);
@@ -630,7 +638,7 @@ section {
         display: inline-block;
         @include media-max576(){
             display: block;
-            margin-top: 2rem;
+            margin: 2rem auto 0;
          }
     }
     &__link {
@@ -737,6 +745,9 @@ section {
     &__title {
         font-size: 3.6rem;
         margin: 0 2rem;
+        @include media-max576() {
+            font-size: 2.6rem;
+        }
     }
     &__decor
     {   
@@ -989,6 +1000,9 @@ section {
         }
         &__input {
             width: 37rem;
+            @include media-max768 () {
+                width: 100%;
+            };
             border-bottom: 1px solid $text-color;
             border-radius: 0;
             font-size: 2rem;
@@ -1085,15 +1099,16 @@ section {
     .container {
         @include flex(stretch, space-between);
         padding: 7.5rem 0 ;
-        @include media-max576(){
+        @include media-max960(){
             flex-wrap: wrap;
         }
     }
     &__table {
         width: 65%;
-        @include media-max576(){
+        @include media-max960(){
             width: 100%;
         }
+       
     }
     &__row {
         border-bottom: 1px solid $text-color;
@@ -1117,6 +1132,9 @@ section {
     }
     &__mini-thumb {
         @include size(11.5rem);
+        @include media-max576(){
+            @include size(7.5rem);
+        }
     }
     &__name {
         @include flex(center, flex-start);
@@ -1126,7 +1144,7 @@ section {
         span {
             padding-left: 3rem;
             @include media-max576(){
-                padding-left: 0;
+                padding-left: 1rem;
             }
         }
     }
@@ -1144,6 +1162,7 @@ section {
             @include media-max576 (){
                 @include size(3rem, 3rem);
                 @include v-align(2rem);
+                border: none;
             }
         }
         i {
@@ -1152,32 +1171,51 @@ section {
             right: 6rem;
             top: 5rem;
             cursor: pointer;
+            @include media-max576() {
+                font-size: 1.8rem;
+                right: 4rem;
+                top: 4rem;
+            }
             &:last-child {
                 top: 7rem;
+                @include media-max576() {
+                    top: 5rem;
+                }
             }   
             &:hover {
                 color: $primary-color;
             }
+            
         }
     }
     &__btn-delete {
         display: block;
         @include size(3.2rem);
+        @include media-max576(){
+            @include size(2.4rem);
+        }
         border-radius: 50%;
         position: absolute;
         top : 2rem;
         left: 8rem;
+        @include media-max576(){
+            top: 1rem;
+            left: 7rem;
+        }
         background-color: #ff0000;
         i {
             display: block;
             font-size: 3.2rem;
-           text-align: center;
+            text-align: center;
+            @include media-max576(){
+                font-size: 2.4rem;
+            }
         }
     }
 }
 .bill {
     width: 30%;
-    @include media-max576(){
+    @include media-max960(){
         width: 100%;
     }
     max-height: 38rem;
@@ -1228,17 +1266,34 @@ section {
 .checkout {
     .container {
         @include flex(flex-start, space-between);
-        padding: 9.5rem 0
+        padding-top: 9.5rem;
+        padding-bottom: 9.5rem;
+        @include media-max768() {
+            flex-wrap: wrap;
+        }
     }
     .form-r {
         width: calc(50% - 1.5rem);
+        @include media-max768() {
+            width: 100%;
+            order: 2;
+        }
         &__item {
             width: 100%;
         }
+        
         &__input {
             width: 100%;
             border-radius: none;
             border-bottom: 1px solid $text-color;
+        }
+        &__item:first-child {
+            @include media-max768() {
+                margin-top: 2rem;
+                input {
+                    border-top: 1px solid $text-color;
+                }   
+            }
         }
         &__input--multi {
             @include size(100%);
@@ -1246,6 +1301,10 @@ section {
     }
     .bill {
         width: calc(50% - 1.5rem);
+        @include media-max768() {
+            width: 100%;
+            order: 1;
+        }
         max-height: none;
         justify-content: flex-start;
         &__payment-method {
@@ -1514,6 +1573,9 @@ section {
     .container {
         padding-top: 10rem;
         padding-bottom: 10rem;
+        @include media-max768 () {
+           padding: 3rem 0 0;
+        };
     }
     .videobox {
         @include flex(center, center);
@@ -1523,7 +1585,7 @@ section {
             display: block;
             @include size(96.9rem, 44.6rem);
             @include media-max960 {
-                width: 100%;
+                @include size(100%);
             }
         }
         &__control {

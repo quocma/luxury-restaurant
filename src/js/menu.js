@@ -25,7 +25,7 @@ function getMenuItems() {
     .then(result => {
         numpage = Math.floor(result.totalOftag / npp) + 1;
         menuItems = result.result;
-        log(menuItems)
+        // log(menuItems)
         menuItems.forEach(item => {
            html += `<li class="dish__item" item-id="${item._id}">
                         <img class="dish__thumbnail" src="${item.img}" alt="370x233">
@@ -180,7 +180,6 @@ var header = document.querySelector('.header');
 window.onscroll = function () { 
     if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
         header.classList.add('header--ontop');
-        header.s
     }
     else {
         header.classList.remove('header--ontop');
@@ -248,7 +247,6 @@ function handleAddToCart() {
             })
         })
     })
-    log(dishOnpage)
 }
 
 /**

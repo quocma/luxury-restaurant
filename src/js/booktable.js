@@ -57,7 +57,6 @@ reserveBtn.addEventListener('click', (e) => {
             phone:  phone.value,
             note:  note.value
         }
-        log(bookingInfo)
         fetch(`http://${HOST}:3003/booking` , {
             // fetch option
             method: "POST",
