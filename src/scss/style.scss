@@ -1403,6 +1403,7 @@ img {
         @include media-max960 {
             width: 100%;
             padding: 0;
+            text-align: center;
         }
         img {
             max-width: 100% ;
