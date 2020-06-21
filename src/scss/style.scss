@@ -36,17 +36,17 @@ img {
     max-width: 123rem;
     margin: 0 auto;
     overflow: hidden;
-    border-left: 1px solid blue;
-    border-right: 1px solid blue;
+    // border-left: 1px solid blue;
+    // border-right: 1px solid blue;
 }
 .container {
     max-width: 117rem;
     margin: 0 auto;
-    border-left: 1px solid red;
-    border-right: 1px solid red;
+    // border-left: 1px solid red;
+    // border-right: 1px solid red;
 }
 section {
-    border-bottom: 1px dashed chartreuse;
+    // border-bottom: 1px dashed chartreuse;
 }
 .sprite {
     background-image: url('../image/icon.png');
