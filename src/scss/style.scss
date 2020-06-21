@@ -1765,6 +1765,9 @@ img {
         background-color: $highlight-color;
         color: white;
         padding-left: 12rem;
+        @include media-max768 {
+            padding-left: 6rem;
+        }
     }
     &__info {
         &:first-child {
