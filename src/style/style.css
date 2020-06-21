@@ -1955,6 +1955,7 @@ img {
 @media screen and (max-width: 768px) {
   .contact__block {
     width: 100%;
+    padding-right: 1rem;
   }
 }
 .contact__block .form-r__item {

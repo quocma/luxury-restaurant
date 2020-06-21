@@ -1734,6 +1734,7 @@ img {
         padding-bottom: 5rem;
         @include media-max768 {
             width: 100%;
+            padding-right: 1rem;
         }
         color: #000;
         .form-r {
@@ -1786,7 +1787,6 @@ img {
     &__h5 {
         font-size: 2.3rem;
     }
-    
     
 }
 
