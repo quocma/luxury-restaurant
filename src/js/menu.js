@@ -160,7 +160,7 @@ function getitemsWithPageAndTag (pageNum, tagName) {
                         <img class="dish__thumbnail" src="${item.img}" alt="370x233">
                         <div class="dish__detail">
                             <h6 class="dish__name">${item.name}</h6>
-                            <p class="dish__desc">${item.desc}</p>
+                            <p class="dish__desc">${item.short_desc}</p>
                             <div class="dish__bar"></div>
                             <div class="dish__price">${vndFormat(item.price)}</div>
                             <a href="#" class="dish__btn js-add-to-cart"><i class="far fa-cart-plus"></i></a>
