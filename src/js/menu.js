@@ -15,6 +15,12 @@ var page = 1;
 var npp = 9;  // number of item per page
 var numpage = 0;
 var menuItems = [];
+
+// numperpage of mobile screen 
+if(screen.width < 576) {
+    npp = 5
+}
+
 function getMenuItems() {
     let html = '';
     fetch(`${PROTOCOL}://${HOST}/dish/menu/${tag}?page=${page}&npp=${npp}`)
