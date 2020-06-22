@@ -1306,6 +1306,11 @@ img {
   font-weight: bold;
   text-transform: uppercase;
 }
+@media screen and (max-width: 576px) {
+  .product-cart__name {
+    font-size: 1rem;
+  }
+}
 .product-cart__name span {
   padding-left: 3rem;
 }
@@ -1318,6 +1323,12 @@ img {
   font-size: 1.5rem;
   font-weight: bold;
   width: 10rem;
+}
+@media screen and (max-width: 576px) {
+  .product-cart__price, .product-cart__subtotal {
+    font-size: 1rem;
+    text-align: center;
+  }
 }
 .product-cart__qty {
   position: relative;
@@ -1349,7 +1360,7 @@ img {
 @media screen and (max-width: 576px) {
   .product-cart__qty i {
     font-size: 1.8rem;
-    right: 4rem;
+    left: 2.5rem;
     top: 4rem;
   }
 }

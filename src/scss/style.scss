@@ -1140,6 +1140,9 @@ img {
         @include flex(center, flex-start);
         position: relative;
         @include font(1.5rem, bold);
+        @include media-max576(){
+            font-size: 1rem;
+        }
         text-transform: uppercase;
         span {
             padding-left: 3rem;
@@ -1151,6 +1154,11 @@ img {
     &__price, &__subtotal {
         @include font(1.5rem, bold);
         width: 10rem;
+       
+        @include media-max576(){
+            font-size: 1rem;
+            text-align: center;
+        }
     }
     &__qty {
         position: relative;
@@ -1173,7 +1181,7 @@ img {
             cursor: pointer;
             @include media-max576() {
                 font-size: 1.8rem;
-                right: 4rem;
+                left: 2.5rem;
                 top: 4rem;
             }
             &:last-child {
