@@ -5,7 +5,7 @@ var tags = '';
 var dishActiveItem = {};
 var relateds = [];
 if(dishId) {
-    fetch(`http://${HOST}:3003/dish/${dishId}`)
+    fetch(`${PROTOCOL}://${HOST}/dish/${dishId}`)
         .then(res => {
             res.json().then( doc => {
                 dishActiveItem = doc.result;
@@ -16,7 +16,7 @@ if(dishId) {
                 document.querySelector('.product__summary').innerHTML = doc.result.short_desc;
                 tags = doc.result.tag
                 // find related product 
-                fetch(`http://${HOST}:3003/dish/related/${tags}?count=4`)
+                fetch(`${PROTOCOL}://${HOST}/dish/related/${tags}?count=4`)
                 .then(res => {
                     res.json().then( result => {
                         relateds = result;
@@ -107,7 +107,7 @@ subcribeBtn.addEventListener('click', (e) => {
        let email = {
         email:  $id('subcribe-email').value
     }
-    fetch(`http://${HOST}:3003/subcribe` , {
+    fetch(`${PROTOCOL}://${HOST}/subcribe` , {
         // fetch option
         method: "POST",
         body: JSON.stringify(email),

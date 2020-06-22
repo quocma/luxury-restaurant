@@ -26,7 +26,7 @@ reserveBtn.addEventListener('click', (e) => {
         warning.textContent = '';
         // submit form checkout to server;
         let order = getOrderdetails();
-        fetch(`http://${HOST}:3003/order` , {
+        fetch(`${PROTOCOL}://${HOST}/order` , {
             // fetch option
             method: "POST",
             body: JSON.stringify(order),
@@ -110,7 +110,7 @@ subcribeBtn.addEventListener('click', (e) => {
         let email = {
             email:  $id('subcribe-email').value
         }
-        fetch(`http://${HOST}:3003/subcribe` , {
+        fetch(`${PROTOCOL}://${HOST}/subcribe` , {
             // fetch option
             method: "POST",
             body: JSON.stringify(email),

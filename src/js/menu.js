@@ -17,7 +17,7 @@ var numpage = 0;
 var menuItems = [];
 function getMenuItems() {
     let html = '';
-    fetch(`http://${HOST}:3003/dish/menu/${tag}?page=${page}&npp=${npp}`)
+    fetch(`${PROTOCOL}://${HOST}/dish/menu/${tag}?page=${page}&npp=${npp}`)
     .then( res => {
         if(res.status == 200 || res.statusText == 'OK') return res.json()
         else throw new Error('Get Items Fail')
@@ -140,7 +140,7 @@ paginationItem[1].addEventListener('click', function(e){
 function getitemsWithPageAndTag (pageNum, tagName) {
     log('get page' + pageNum + 'and tag : ' + tagName)
     let html = '';
-    fetch(`http://${HOST}:3003/dish/menu/${tagName}?page=${pageNum}&npp=${npp}`)
+    fetch(`${PROTOCOL}://${HOST}/dish/menu/${tagName}?page=${pageNum}&npp=${npp}`)
     .then( res => {
         if(res.status == 200 || res.statusText == 'OK') return res.json()
         else throw new Error('Get Items Fail')
@@ -198,7 +198,7 @@ subcribeBtn.addEventListener('click', (e) => {
         let email = {
             email:  $id('subcribe-email').value
         }
-        fetch(`http://${HOST}:3003/subcribe` , {
+        fetch(`${PROTOCOL}://${HOST}/subcribe` , {
             // fetch option
             method: "POST",
             body: JSON.stringify(email),

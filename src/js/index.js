@@ -13,7 +13,7 @@ var guest = $id('friends');
 var menuList = $('.js-food__menu-list');
 var specList = $('.js-food__menu-list');
 // get list dish of homepage
-fetch(`http://${HOST}:3003/dish/homepage`)
+fetch(`${PROTOCOL}://${HOST}/dish/homepage`)
       .then(res => {
         res.json().then ( result => {
             let html = ''
@@ -111,7 +111,7 @@ reserveBtn.addEventListener('click', (e) => {
             guest:  guest.value,
             phone:  phone.value
         }
-        fetch(`http://${HOST}:3003/booking` , {
+        fetch(`${PROTOCOL}://${HOST}/booking` , {
             // fetch option
             method: "POST",
             body: JSON.stringify(bookingInfo),
@@ -151,7 +151,7 @@ subcribeBtn.addEventListener('click', (e) => {
         let email = {
             email:  document.getElementById('subcribe-email').value
         }
-        fetch(`http://${HOST}:3003/subcribe` , {
+        fetch(`${PROTOCOL}://${HOST}/subcribe` , {
             // fetch option
             method: "POST",
             body: JSON.stringify(email),
