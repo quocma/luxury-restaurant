@@ -64,7 +64,7 @@ function paginate () {
     resetPagination();
     for(let i = 0; i < numpage; i++) {
         let html = `
-                        <a href="#" class="pagination__link pagination__link btn btn--rounded">${i +  1}</a>
+                        <a href="#list" class="pagination__link pagination__link btn btn--rounded">${i +  1}</a>
                 `
         let li  = document.createElement('li');
         li.classList.add('pagination__item');
@@ -161,9 +161,11 @@ function getitemsWithPageAndTag (pageNum, tagName) {
                         <div class="dish__detail">
                             <h6 class="dish__name">${item.name}</h6>
                             <p class="dish__desc">${item.short_desc}</p>
-                            <div class="dish__bar"></div>
-                            <div class="dish__price">${vndFormat(item.price)}</div>
-                            <a href="#" class="dish__btn js-add-to-cart"><i class="far fa-cart-plus"></i></a>
+                            <div class="dish__bottom">
+                                <div class="dish__bar"></div>
+                                <div class="dish__price">${vndFormat(item.price)}</div>
+                                <a href="#" class="dish__btn js-add-to-cart"><i class="far fa-cart-plus"></i></a>
+                            </div>
                         </div>
                     </li>
                     `
