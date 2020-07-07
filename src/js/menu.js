@@ -78,13 +78,16 @@ function paginate () {
             e.preventDefault();
             let paginationChildLink = $all('.pagination__item a');
             if (!this.classList.contains('active')) {
+                // active css on selected page
                 this.classList.add('active');
                 page = parseInt(this.innerHTML);
+                // scroll to the top of the list
+                topFunction()
                 getitemsWithPageAndTag(page , tag);
-                // let self = this;
+                // remove css on another page
                 paginationChildLink.forEach(el => {
                 if(el != this) {
-                        el.classList.remove('active');
+                    el.classList.remove('active');
                 }
             })
             }
@@ -298,5 +301,10 @@ function handleViewDetails () {
         });
     })
       
+}
+// When the user clicks on the button pagination , scroll to the top of the list
+function topFunction() {
+    document.body.scrollTop = 200; // For Safari
+    document.documentElement.scrollTop = 200; // For Chrome, Firefox, IE and Opera
 }
 
